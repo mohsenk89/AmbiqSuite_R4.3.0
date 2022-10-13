@@ -1,0 +1,36 @@
+//
+// To use with J-Link Commander from a Command Prompt.
+//  jlink -CommanderScript jlink-prog-info0.txt
+//
+// connect to device
+device AMAP42KK-KBR
+
+si SWD
+speed 1000
+r
+sleep 10
+
+//set C runtime environment
+wreg MSP, 0x10000100
+
+// offset
+w4 0x10000000 0
+// number of words
+w4 0x10000004 0x200
+// key
+w4 0x10000008 0xd894e09e
+// return value
+w4 0x1000000C 0xFFFFFFFF
+
+loadbin info0.bin 0x10001000
+setPC 0x08000061
+
+g
+sleep 50
+mem32 0x1000000C 1
+mem32 0x10000010 1          // dump return value for check
+// Reset - need POI for info0 invalid to valid transaction, if that is what was desired
+w4 0x40000004 0x1B
+
+sleep 2000
+qc

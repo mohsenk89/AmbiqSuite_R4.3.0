@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>4282811987</fileChecksum>
+    <configuration>
+        <name>FlashApollo4p_RAM2816K</name>
+        <outputs>
+            <file>$PROJ_DIR$\readme.txt</file>
+            <file>$PROJ_DIR$\am_hal_mram.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\Obj\framework\flash_loader.o</file>
+            <file>$PROJ_DIR$\am_hal_bootrom_helper.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\FlashApollo4p.c</file>
+            <file>$PROJ_DIR$\flash_config.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\Obj\FlashApollo4p.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\Obj\framework\flash_loader_asm.o.rsp</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\Obj\framework\flash_loader_asm.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\Exe\FlashApollo4p_RAM2816K.out</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.c</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\List\FlashApollo4p_RAM2816K.map</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\List\framework\flash_loader.s</file>
+            <file>$PROJ_DIR$\Apollo4pRAM2816K.icf</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\List\FlashApollo4p.s</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\List\framework\flash_loader.lst</file>
+            <file>$PROJ_DIR$\FlashApollo4p_RAM2816K\List\FlashApollo4p.lst</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 20 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashApollo4p.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 30 10</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13 8 15 6 9 11 19 2 12 1 3 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashApollo4p_RAM2816K\Exe\FlashApollo4p_RAM2816K.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 26 4 17 10 16 24 18 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\..\DevTools\IAR Systems\Embedded Workbench 9.2\arm\src\flashloader\framework2\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25 29 4</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13 8 15 6 9 11 19 2 12</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\..\DevTools\IAR Systems\Embedded Workbench 9.2\arm\src\flashloader\framework2\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 17</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 14</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+</project>

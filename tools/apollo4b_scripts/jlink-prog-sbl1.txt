@@ -1,0 +1,48 @@
+//
+// To use with J-Link Commander from a Command Prompt.
+//  jlink -CommanderScript jlink-prog-sbl1.txt
+//  This script is to only be used if current SBL is in slot#0
+//  i.e. at 0x8000
+//
+// connect to device
+device AMAP42KK-KBR
+si SWD
+speed 1000
+r
+sleep 10
+h
+
+//set C runtime environment
+wreg MSP, 0x10000100
+
+// pDst - at 0x10000 (slot 1)
+w4 0x10000000 0x10000
+// number of words == 32K Bytes
+w4 0x10000004 0x2000
+// key
+w4 0x10000008 0x12344321
+// return value
+w4 0x1000000C 0xFFFFFFFF
+
+loadbin encrypted_SBL0.bin 0x10001000
+setPC 0x0800005d
+
+g
+
+sleep 50
+// **** Change this based on device flashmap ****
+loadbin sbl_ota.bin 0xF0000     //load the SBL OTA metadata into temp location in flash
+// Set up OTA Descriptor at 0xFE000
+w4 0xFE000 0xF0003
+w4 0xFE004 0xFFFFFFFF
+// Set up OTAPointer
+w4 0x40020264 0xFE003
+// Reset POI
+w4 0x40000004 0x1B
+
+sleep 1000
+
+connect
+mem32 0xFE000 1
+// quit
+qc

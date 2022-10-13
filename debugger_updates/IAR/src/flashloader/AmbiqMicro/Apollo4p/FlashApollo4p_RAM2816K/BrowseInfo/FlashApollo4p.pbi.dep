@@ -1,0 +1,14 @@
+C:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbi: \
+  C:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p.c \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\src\flashloader\framework2\flash_loader.h \
+  C:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\flash_config.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\stdint.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\ycheck.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\yvals.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\DLib_Defaults.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\DLib_Config_Normal.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\DLib_Product.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\src\flashloader\framework2\flash_loader_extra.h \
+  C:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\am_hal_mram.h \
+  C:\DevTools\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\stdbool.h \
+  C:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\am_hal_bootrom_helper.h

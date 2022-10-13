@@ -1,0 +1,26 @@
+//
+// To use with J-Link Commander from a Command Prompt.
+//  jlink -CommanderScript jlink-update-firmware.txt
+//
+
+//connect to device
+device AMAP42KK-KBR
+si SWD
+speed 1000
+r
+sleep 10
+
+// **** Change this based on device flashmap ****
+// Load the OTA image at a temp place in flash
+loadbin hello_world_ota.bin 0xFE000
+// Set up OTA Descriptor at 0xFC000
+w4 0xFC000 0xFE003
+w4 0xFC004 0xFFFFFFFF
+// Set up OTAPointer
+w4 0x40020264 0xFC001
+// Reset
+w4 0x40000004 0x1B
+sleep 2000
+connect
+mem32 0xFC000, 1
+qc

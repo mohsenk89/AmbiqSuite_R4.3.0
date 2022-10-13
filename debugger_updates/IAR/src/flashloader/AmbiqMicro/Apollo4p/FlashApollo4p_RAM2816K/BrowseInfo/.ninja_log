@@ -1,0 +1,13 @@
+# ninja log v5
+4	78	6811804070000000	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR_AMAP42KP-KBR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.xcl	29b8cdd8fcac1248
+1	113	6811804070000000	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR_AMAP42KP-KBR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/framework/flash_loader.xcl	d5cc9faad1e317cc
+84	144	6811804077675158	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR_AMAP42KP-KBR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.pbi	72c893d235c78d9c
+119	171	6811804077949410	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR_AMAP42KP-KBR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/framework/flash_loader.pbi	9b36c9f26d6adfe6
+174	205	6811804078308279	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR_AMAP42KP-KBR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.pbd	b38fd75b6570c059
+208	1150	6811804087631903	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR_AMAP42KP-KBR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.pbw	118d872a149aa101
+15	89	6812338540000000	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.xcl	fe3027bba23948d5
+1	121	6812338540000000	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/framework/flash_loader.xcl	3c2ca875bf4b3389
+95	143	6812338543301945	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.pbi	e078b26835e4b854
+126	167	6812338543541140	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/framework/flash_loader.pbi	2ea3233f5b6a387a
+169	181	6812338543700634	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.pbd	474557ff43029764
+184	495	6812338546727244	C:/projects/ide-support_dev/interim_releases/Apollo4p/IAR/src/flashloader/AmbiqMicro/Apollo4p/FlashApollo4p_RAM2816K/BrowseInfo/FlashApollo4p.pbw	2550f1db55317077

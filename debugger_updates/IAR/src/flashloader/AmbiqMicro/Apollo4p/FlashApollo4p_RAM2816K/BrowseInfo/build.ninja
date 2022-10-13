@@ -1,0 +1,51 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\src\flashloader\framework2\flash_loader.c" -xcl_file C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.xcl -macro_file C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.tmp -icc_path "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\bin\iccarm.exe"
+  flags = "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\src\flashloader\framework2\flash_loader.c" -lCN C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\List\framework -la C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\List\framework -o C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\Obj\framework --no_clustering --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\inc\c\DLib_Config_Normal.h" -I "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\src\flashloader\framework2\\" -I C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\ -Ohs --use_c++_inline --predef_macros C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.tmp
+  rspfile_name = C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.xcl.rsp
+
+build C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p.c -xcl_file C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.xcl -macro_file C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.tmp -icc_path "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\bin\iccarm.exe"
+  flags = C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p.c -lCN C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\List\ -la C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\List\ -o C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\Obj\ --no_clustering --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\inc\c\DLib_Config_Normal.h" -I "C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\src\flashloader\framework2\\" -I C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\ -Ohs --use_c++_inline --predef_macros C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.tmp
+  rspfile_name = C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.xcl.rsp
+
+build C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.pbi : INDEXER C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.xcl |  $
+C$:\DevTools\IAR$ Systems\Embedded$ Workbench$ 9.2\arm\src\flashloader\framework2\flash_loader.c
+  flags = -out=C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.pbi -f C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.xcl
+
+build C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbi : INDEXER C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.xcl |  $
+C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p.c
+  flags = -out=C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbi -f C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.xcl
+
+build C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbw : MAKEBROWSE C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbd
+  flags = C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbd -output C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbw
+
+build C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbd : PDBLINK C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.pbi |  $
+C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbi
+  flags = -M C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbd C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\framework\flash_loader.pbi C$:\projects\ide-support_dev\interim_releases\Apollo4p\IAR\src\flashloader\AmbiqMicro\Apollo4p\FlashApollo4p_RAM2816K\BrowseInfo\FlashApollo4p.pbi
+
